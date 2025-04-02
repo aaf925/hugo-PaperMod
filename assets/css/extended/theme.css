@@ -1,0 +1,97 @@
+<style>
+:root {
+  --theme: #ffffff;       /* Fondo claro */
+  --theme-dark: #1a1a1a;  /* Fondo oscuro más intenso */
+  --primary: #000000;     /* Color primario */
+  --primary-dark: #ffffff;/* Color primario en modo oscuro */
+  --text: #333333;        /* Texto modo claro */
+  --text-dark: #e2e2e2;   /* Texto modo oscuro */
+  --menu-text: #333333;   /* Color del menú modo claro */
+  --menu-text-dark: #ffffff; /* Color del menú modo oscuro */
+  --border: #e5e7eb;      /* Bordes modo claro */
+  --border-dark: #374151;  /* Bordes modo oscuro */
+}
+
+/* Estilos base */
+body {
+  background-color: var(--theme) !important;
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Modo oscuro */
+.dark body {
+  background-color: var(--theme-dark) !important;
+  color: var(--text-dark);
+}
+
+/* Menú de navegación */
+.menu-list a {
+  color: var(--menu-text);
+  transition: color 0.3s;
+}
+
+.dark .menu-list a {
+  color: var(--menu-text-dark);
+}
+
+/* Icono del tema (sol/luna) */
+#theme-toggle {
+  color: var(--text);
+}
+
+.dark #theme-toggle {
+  color: var(--text-dark);
+}
+
+.theme-icon {
+  fill: currentColor;
+}
+
+/* Ajustes específicos para el logo */
+.logo {
+  color: var(--text);
+}
+
+.dark .logo {
+  color: var(--text-dark);
+}
+
+/* Bordes y separadores */
+.post-card {
+  border-bottom: 1px solid var(--border);
+}
+
+.dark .post-card {
+  border-bottom: 1px solid var(--border-dark);
+}
+
+/* Botones y enlaces */
+.btn {
+  background-color: var(--primary);
+  color: white;
+}
+
+.dark .btn {
+  background-color: var(--primary-dark);
+}
+
+a {
+  color: var(--primary);
+}
+
+.dark a {
+  color: var(--primary-dark);
+}
+
+/* Texto de metadatos (fechas, autores) */
+.post-meta {
+  color: var(--text);
+  opacity: 0.8;
+}
+
+.dark .post-meta {
+  color: var(--text-dark);
+  opacity: 0.8;
+}
+</style>

@@ -1,3 +1,23 @@
+:root {
+    --primary: #4f46e5;
+    --primary-dark: #6366f1;
+    --text-color: #333333;
+    --text-color-dark: #e2e2e2;
+    --card-bg: #ffffff;
+    --card-bg-dark: #1e1e1e;
+    --input-bg: #ffffff;
+    --input-bg-dark: #2d2d2d;
+    --border-color: #e5e7eb;
+    --border-color-dark: #374151;
+  }
+  
+  .dark {
+    --text-color: var(--text-color-dark);
+    --card-bg: var(--card-bg-dark);
+    --input-bg: var(--input-bg-dark);
+    --border-color: var(--border-color-dark);
+  }
+
 .nav {
     display: flex;
     flex-wrap: wrap;
@@ -10,6 +30,7 @@
 
 .nav a {
     display: block;
+    color: var(--header-text-color); /* Nuevo: variable para color de texto */
 }
 
 .logo,
@@ -25,6 +46,7 @@
 .logo a {
     font-size: 24px;
     font-weight: 700;
+    color: var(--header-text-color); /* Nuevo: variable para color de texto */
 }
 
 .logo a img, .logo a svg {
@@ -39,8 +61,10 @@
 button#theme-toggle {
     font-size: 26px;
     margin: auto 4px;
+    color: var(--header-text-color); /* Nuevo: variable para color de texto */
 }
 
+/* Iconos del tema */
 body.dark #moon {
     vertical-align: middle;
     display: none;
@@ -63,6 +87,12 @@ body:not(.dark) #sun {
 
 #menu a {
     font-size: 16px;
+    color: var(--header-text-color); /* Nuevo: variable para color de texto */
+    transition: color 0.2s;
+}
+
+#menu a:hover {
+    color: var(--primary);
 }
 
 #menu .active {
@@ -86,8 +116,23 @@ body:not(.dark) #sun {
     margin: auto 3px;
     font-size: 16px;
     font-weight: 500;
+    color: var(--header-text-color); /* Nuevo: variable para color de texto */
 }
 
 .logo-switches {
     flex-wrap: inherit;
 }
+
+/* Estilos específicos para modo oscuro */
+.dark .nav a,
+.dark .logo a,
+.dark #menu a,
+.dark .lang-switch a,
+.dark button#theme-toggle {
+    color: var(--header-text-color-dark);
+}
+
+.dark #menu a:hover {
+    color: var(--primary-dark);
+}
+
